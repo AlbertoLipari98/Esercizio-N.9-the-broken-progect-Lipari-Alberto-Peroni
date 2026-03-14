@@ -114,6 +114,7 @@ export class BalanceWidgetComponent implements OnInit, OnDestroy {
         this.saldo = acc.saldo;
         this.titolare = acc.titolare;
         this.numeroConto = acc.numeroConto;
+        this.cd.markForCheck()
       })
     );
   }

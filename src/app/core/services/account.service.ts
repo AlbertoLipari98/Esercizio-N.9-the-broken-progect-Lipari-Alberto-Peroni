@@ -26,7 +26,11 @@ export class AccountService {
   account$ = toObservable(this.account);
 
   debit(amount: number): void {
-    this.account().saldo -= amount;
+    // this.account().saldo -= amount;
+    this.account.update(sal => ({
+      ...sal, saldo : sal.saldo -= amount
+    }))
+    
   }
 
   /**
